@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .map {
+            width: 800px;
+            height: 450px;
+            background: url("images/map1.jpg");
+            margin: 0 auto;
+        }
+
+        .map:hover {
+            /*                               上下   左右    不重複,x y */
+            background: url("images/1.png") center 70% no-repeat, url("images/2.png") 50px 260px no-repeat, url("./images/3.png") center left no-repeat, url("images/map1.jpg");
+            /* 上面圖片出現的大小 */
+            background-size: 10%, 10%, 10%, auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map"></div>
+</body>
+
+</html>

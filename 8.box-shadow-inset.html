@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow-inset</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(255, 205, 147);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgb(255, 94, 121) inset, 0 0 60px rgb(144, 198, 207) inset, 0 0 100px orange inset;
+            position: relative;
+        }
+
+        .box2 {
+            width: 250px;
+            height: 250px;
+            background-color: rgb(225, 65, 65);
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box2">
+        </div>
+    </div>
+
+</body>
+
+</html>

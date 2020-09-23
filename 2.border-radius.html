@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius</title>
+    <style>
+        .box {
+            width:200px ;
+            height: 200px;
+            background-color: aquamarine;
+            float:left ;
+            margin: 10px ;
+            text-align: center;
+            line-height: 200px;
+        }
+        .box1{
+            border-radius: 50px;
+        }
+        .box2{
+           
+            background-color: rgb(180, 172, 255);
+            border-radius: 10px 20px 5px 50px;
+        }
+        /* 只打三個值，第四個值會吃對角的數值所以是20px */
+
+        .box3{
+            background-color: rgb(255, 172, 230);
+            border-radius: 10px 20px 5px ;
+            
+        }
+        /* 只打兩個值吃對角 */
+        .box4{
+            background-color: rgb(255, 127, 127);
+            border-radius: 10px 20px ;
+        }
+        .box5{
+            background-color: rgb(253, 255, 127);
+            border-radius: 50%;
+        }
+        /* 畫扇型:指定 */
+        .box6{
+            width: 420px;
+            height: 420px;
+            border-radius: 100% 0 0 0;
+            line-height: 400px;
+        }
+        .box7{
+            border-radius: 20px/80px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+    <div class="box box5">box5</div>
+    <div class="box box6">box6</div>
+    <div class="box box7">box7</div>
+
+</body>
+</html>

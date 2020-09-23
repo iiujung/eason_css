@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background size</title>
+    <style>
+        .city {
+            width: 800px;
+            height: 250px;
+            /*                                 x軸   y軸 */
+            background: url("images/city.jpg") center 50% no-repeat;
+            background-size: 300px 300px;
+            outline: 1px solid #ccc;
+        }
+
+        /*  contain  顯示圖片內容為主 */
+        .contain {
+            background-size: contain;
+        }
+
+        /* cover: 填滿整個區塊 */
+        .cover {
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="city"></div>
+    <div class="city contain"></div>
+    <div class="city cover"></div>
+</body>
+
+</html>

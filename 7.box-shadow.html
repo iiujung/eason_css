@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: thistle;
+            transition: .5s;
+            margin: 20px ;
+            float: left;
+        }
+        .box1:hover {
+            box-shadow: 20px 20px 30px rgb(110, 110, 110);
+        }
+        /* ○  h-offset ○  v-offset ○  blur ○  spread ○  color ○  Inset 內陰影 */
+        .box2:hover {
+            box-shadow: 20px 20px 20px 5px rgb(63, 45, 75) inset;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+</body>
+</html>

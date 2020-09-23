@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-overflow</title>
+    <style>
+        .container {
+            width: 100%;
+            display: flex;
+        }
+
+        /* 單行溢出點點點 */
+        .box {
+            margin: 10px;
+            background-color: #afa;
+            overflow: hidden;
+            /* 點點 */
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+        }
+
+        /* 多行溢出點點點 */
+        .box2 {
+            margin: 10px;
+            background-color: #afa;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum illum similique animi ullam
+            harum sed soluta nulla veritatis. Voluptate, magni facilis officia voluptas voluptatibus distinctio
+            cupiditate laboriosam nam tempora debitis atque ratione temporibus quae deleniti omnis quasi suscipit nemo
+            cum quaerat. Eos autem nihil debitis temporibus soluta. Tempora, delectus vel.</div>
+        <div class="box2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum illum similique animi ullam
+            harum sed soluta nulla veritatis. Voluptate, magni facilis officia voluptas voluptatibus distinctio
+            cupiditate laboriosam nam tempora debitis atque ratione temporibus quae deleniti omnis quasi suscipit nemo
+            cum quaerat. Eos autem nihil debitis temporibus soluta. Tempora, delectus vel.</div>
+        <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum illum similique animi ullam
+            harum sed soluta nulla veritatis. Voluptate, magni facilis officia voluptas voluptatibus distinctio
+            cupiditate laboriosam nam tempora debitis atque ratione temporibus quae deleniti omnis quasi suscipit nemo
+            cum quaerat. Eos autem nihil debitis temporibus soluta. Tempora, delectus vel.</div>
+    </div>
+</body>
+
+</html>

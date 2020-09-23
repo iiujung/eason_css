@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: thistle;
+            /* ○  border 會佔寬度(排版時須注意計算)， outline 不佔寬度。
+○  border 可以僅設定某一邊，outline 不行。
+○  border 距離靠 padding調整，outline 則是 outline-offset
+○  outline 可以拿來看別人如何切版（小技巧） */
+            outline: 2px solid blue;
+            outline-offset: -20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

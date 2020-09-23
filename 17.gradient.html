@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <style>
+        .box {
+            width: 100%;
+            height: 350px;
+            margin-bottom: 20px;
+        }
+
+        .grad1 {
+            background: linear-gradient(purple, blue, pink, chocolate);
+        }
+
+        /* to right改成從左到右的漸層 */
+        .grad2 {
+            background: linear-gradient(to right, purple, blue, pink, chocolate);
+        }
+
+        /* 改變角度 */
+        .grad3 {
+            background: linear-gradient(135deg, purple, blue, pink, chocolate);
+        }
+
+        /* 指定顏色開始的位置 */
+        .grad4 {
+            background: linear-gradient(to right, purple 50%, blue, pink 80%, chocolate);
+        }
+
+        /* 透明漸層 */
+        .grad5 {
+            background: linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+        }
+
+        /* 多重背景 */
+        .grad6 {
+            background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+        }
+
+        /* 指定範圍 */
+        .grad7 {
+            background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+            height: 200px;
+            width: 200px;
+        }
+
+        /* 方格 */
+        .grad8 {
+            background: linear-gradient(to right, rgba(199, 130, 245, 0.438) 50%, rgba(24, 255, 236, 0.418) 50%), linear-gradient(rgb(199, 130, 245) 50%, rgb(24, 255, 236) 50%);
+            background-size: 50px 50px;
+        }
+
+        /* 重複漸層 */
+        .grad9 {
+            background: repeating-linear-gradient(deeppink, hotpink 25%);
+        }
+
+        /* 設定多種顏色及位置 */
+        .grad10 {
+            background: radial-gradient(purple, yellow 25%, red 100%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        /* 設定圓形漸層 */
+        .grad11 {
+            background: radial-gradient(circle at 80% 80px, purple, yellow 25%, red 100%);
+        }
+
+        /* 放射狀漸層 */
+        .grad12 {
+            background: repeating-radial-gradient(circle, deeppink, orchid 8%, hotpink 16%, deeppink 25%);
+        }
+
+        /* 漸層文字 */
+
+        h2 {
+            font-size: 200px;
+            background: linear-gradient(50deg, pink, rgb(133, 221, 255), rgb(162, 162, 255));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box grad1"></div>
+    <div class="box grad2"></div>
+    <div class="box grad3"></div>
+    <div class="box grad4"></div>
+    <div class="box grad5"></div>
+    <div class="box grad6"></div>
+    <div class="box grad7"></div>
+    <div class="box grad8"></div>
+    <div class="box grad9"></div>
+    <div class="box grad10"></div>
+    <div class="box grad11"></div>
+    <div class="box grad12"></div>
+    <h2>hello world</h2>
+
+
+</body>
+
+</html>

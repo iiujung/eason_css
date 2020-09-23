@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background clip</title>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+
+        .box {
+            background: url("./images/back1.jpg");
+            width: 300px;
+            height: 300px;
+            float: left;
+            margin: 10px;
+            border: 10px dashed #fff;
+            padding: 20px;
+        }
+
+        /* border-box 為系統預設 */
+        .border-box {
+            background-clip: border-box;
+        }
+
+        .padding-box {
+            background-clip: padding-box;
+        }
+
+        .content-box {
+            background-clip: content-box;
+        }
+
+        /*  CSS 前綴 (prefix) -webkit- : chrome, safari ，-moz- : firefox，-ms- : ie, edge，-o- : opera*/
+        h1 {
+            background: url("images/mosaic-3394375_640.jpg");
+            font-size: 200px;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box border-box"></div>
+    <div class="box padding-box"></div>
+    <div class="box content-box"></div>
+    <h1>hello kitty!</h1>
+</body>
+
+</html>
