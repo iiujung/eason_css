@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify-content</title>
+    <style>
+        .wrap {
+            height: 200px;
+            display: flex;
+            /* row row-reverse column column-reverse */
+            flex-direction: row-reverse;
+            background-color: #ccc;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .end {
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        .center {
+            justify-content: center;
+        }
+
+        .evenly {
+            justify-content: space-evenly;
+        }
+
+        .between {
+            justify-content: space-between;
+        }
+
+        .around {
+            justify-content: space-around;
+        }
+    </style>
+
+</head>
+
+<body>
+    flex-direction
+    <div class="wrap">
+
+        <div class="box autobg">box1</div>
+        <div class="box autobg">box2</div>
+        <div class="box autobg">box3</div>
+    </div>
+    wrap end
+    <div class="wrap end">
+        <div class="box autobg">box1</div>
+        <div class="box autobg">box2</div>
+        <div class="box autobg">box3</div>
+    </div>
+    space-between
+    <div class="wrap between">
+        <div class="box autobg">box1</div>
+        <div class="box autobg">box2</div>
+        <div class="box autobg">box3</div>
+    </div>
+    space-Around
+    <div class="wrap around">
+        <div class="box autobg">box1</div>
+        <div class="box autobg">box2</div>
+        <div class="box autobg">box3</div>
+    </div>
+    space-evenly
+    <div class="wrap evenly">
+        <div class="box autobg">box1</div>
+        <div class="box autobg">box2</div>
+        <div class="box autobg">box3</div>
+    </div>
+    center
+    <div class="wrap center">
+        <div class="box autobg">box1</div>
+        <div class="box autobg">box2</div>
+        <div class="box autobg">box3</div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script>
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max - 50) + 100);
+        }
+
+        function getRBGA() {
+            return `linear-gradient(135deg, rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.5), rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.8)`
+        }
+
+        const elements = document.querySelectorAll('.autobg');
+
+        Array.from(elements).forEach((element, index) => {
+            element.style.backgroundImage = getRBGA();
+        });
+
+    // $('.autobg').each(function (index, currentElement) {
+    //     currentElement.style.backgroundImage = getRBGA();
+    // });
+    </script>
+</body>
+
+</html>

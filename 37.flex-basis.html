@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-basis</title>
+    <style>
+        .wrap {
+            width: 800px;
+            display: flex;
+            flex-direction: row;
+            background-color: #ccc;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            /* 滿版均分的寫法 */
+            flex-basis: 0;
+            flex-grow: 1;
+        }
+
+
+
+
+        .basis2 {
+            flex-basis: 200px;
+        }
+
+        /* Flex-basis 其實就是決定 items 在放進 flex 容器時的寬度。
+如果沒給 flex-basis，則預設值為 auto，寬度取決於 width 的設定。
+如果沒給 width 設定，則寬度由內容決定。
+結論: max-width/min-width > flex-basis > width > content
+ */
+        .box1 {
+            flex-basis: 100px;
+            width: 10px;
+            height: 100px;
+        }
+
+        .box2 {
+            flex-basis: auto;
+            width: 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    flex basis 均分
+    <div class="wrap">
+        <div class="box autobg basis">box1</div>
+        <div class="box autobg ">box2</div>
+        <div class="box autobg ">box3</div>
+    </div>
+    flex basis
+    <div class="wrap">
+        <div class="box autobg basis2">box1</div>
+        <div class="box autobg ">box2</div>
+        <div class="box autobg ">box3</div>
+    </div>
+    flex basis 權重
+    <div class="wrap">
+        <div class="box1 autobg ">box1</div>
+        <div class="box2 autobg ">box2</div>
+        <div class="box3 autobg ">box3</div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script>
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max - 50) + 100);
+        }
+
+        function getRBGA() {
+            return `linear-gradient(135deg, rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.5), rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.8)`
+        }
+
+        const elements = document.querySelectorAll('.autobg');
+
+        Array.from(elements).forEach((element, index) => {
+            element.style.backgroundImage = getRBGA();
+        });
+
+    // $('.autobg').each(function (index, currentElement) {
+    //     currentElement.style.backgroundImage = getRBGA();
+    // });
+    </script>
+</body>
+
+</html>
