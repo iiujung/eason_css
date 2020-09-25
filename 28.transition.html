@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: #faa;
+            transition: .5s;
+
+
+        }
+
+        .box:hover {
+            background: rgb(212, 237, 100);
+            width: 300px;
+        }
+
+        .linear {
+            transition-timing-function: ccubic-bezier(.03, 1.1, .59, .29);
+        }
+
+        .linear2 {
+            transition: background .5s, width .5s ease .3s;
+        }
+
+        .linear3 {
+            transition: all 2s ease-in-out .5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box linear"></div>
+    <div class="box linear2"></div>
+    <div class="box linear3"></div>
+
+
+</body>
+
+</html>

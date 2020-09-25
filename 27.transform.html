@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 5px;
+            background-color: #faf;
+            transition: .5s;
+            float: left;
+            position: relative;
+        }
+
+        .translatex:hover {
+            transform: translateX(30px);
+        }
+
+        .translatey:hover {
+            transform: translatey(30px);
+        }
+
+        .translatexy:hover {
+            transform: translate(30px, 50px);
+        }
+
+        .rotate:hover {
+            transform: rotate(80deg);
+        }
+
+        .scale:hover {
+            transform: scale(1.2);
+            border: 3px solid rgb(230, 255, 4);
+        }
+
+        .skewx {
+            transform: skewX(20deg);
+        }
+
+        .skewy {
+            transform: skewy(20deg);
+        }
+
+        .matrix-tr:hover {
+            transform: matrix(1, 0, 0, 1, 100, 0);
+        }
+
+        .matrix-sc:hover {
+            transform: matrix(2, 0, 0, 2, 100, 0);
+        }
+
+        /* 寫起始位置 */
+        .trans-origin {
+            transform-origin: 0 0;
+
+        }
+
+        .trans-origin:hover {
+            transform: translate(30px, 50px) rotate(80deg);
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(113, 250, 255);
+            /* 置中方式 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box translatex">translatex</div>
+    <div class="box translatey">translatey</div>
+    <div class="box translatexy">translatexy</div>
+    <div class="box rotate">rotate</div>
+    <div class="box scale">scale</div>
+    <div class="box skewx">skewx</div>
+    <div class="box skewy">skewy</div>
+    <div class="box matrix-tr">matrix translate</div>
+    <div class="box matrix-sc">matrix scale</div>
+    <div class="box trans-origin">變形中心點</div>
+    <div class="box">
+        <div class="box2">置中</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4px</title>
+    <style>
+        .container {
+            font-size: 0;
+        }
+
+        /* 通常的解法 */
+        .box {
+            height: 100px;
+            width: 100px;
+            background: #ccc;
+            display: inline-block;
+        }
+
+        .box1 {
+            margin: -4px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
