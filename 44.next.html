@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        padding: 1rem;
+    }
+
+    .post {
+        width: 500px;
+        margin: 1rem auto;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .post p {
+        line-height: 2rem;
+        font-size: 1.6rem;
+        float: left;
+        width: calc(100% - 6rem);
+    }
+
+    .post .btn-more {
+        width: 5rem;
+        display: inlie-block;
+        background: #999;
+        border-radius: 2px;
+        padding: 0.2rem 0.5rem;
+        color: #fff;
+        line-height: 2rem;
+        font-size: 0.5rem;
+        text-align: right;
+        cursor: pointer;
+    }
+
+    .post .btn-more:hover {
+        background: #777;
+    }
+
+    .post article {
+        display: none;
+        margin: 1rem 0rem 1rem 0.5rem;
+        line-height: 1.2rem;
+        color: #AAA;
+        border-left: 1px dotted #AAA;
+        padding-left: 0.5rem;
+    }
+</style>
+
+<body>
+    <div class="ex1">
+        <div class="post">
+            <p>What is Lorem Ipsum?</p>
+            <span class="btn-more">ReadMore</span>
+            <article>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, </article>
+        </div>
+        <div class="post">
+            <p>Why do we use it?</p>
+            <span class="btn-more">ReadMore</span>
+            <article>It is a long established fact that a reader will be distracted by the readable content of a page
+                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                distribution of letters, as opposed to using 'Content here, content here', making it look like readable
+                English. </article>
+        </div>
+        <div class="post">
+            <p>Where does it come from?</p>
+            <span class="btn-more">ReadMore</span>
+            <article>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
+                professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+                consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
+                literature, discovered the undoubtable source.</article>
+        </div>
+    </div>
+
+    <!-- js貼在後面，在跑的時候才不會當掉 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('.btn-more').click(function () {
+                $(this).next('article').slideToggle();
+            });
+        });
+    </script>
+</body>
+
+</html>

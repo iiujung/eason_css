@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navmenu with jquery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        /* 全域樣式 */
+        * {
+            outline: 1px solid blue;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* // header樣式 */
+        header {
+            height: 60px;
+            padding: 12px;
+            background: #eee;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* // __header要釘在最上方 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .header__nav {
+            display: flex;
+            align-items: center;
+            height: 44px;
+
+        }
+
+        .nav__item {
+            padding: 0 8px;
+        }
+
+        .nav__item:hover a {
+            color: blue;
+        }
+
+        .logo {
+            line-height: 44px;
+        }
+
+
+
+
+        /* // 內文樣式 */
+        main {
+            padding: 60px;
+        }
+
+        section {
+            padding-top: 60px;
+        }
+
+        .section__title {
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        /* // 隱藏漢堡選單 在電腦版時 */
+
+        .hamBar {
+            display: none;
+            height: 44px;
+            width: 44px;
+        }
+
+        /* // 斷點變更 */
+
+        @media all and (max-width:768px) {
+            .header__nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                /* //     貼齊header__nav的下方展開 */
+                left: 0;
+                right: 0;
+                bottom: 0;
+                /* //     把區塊往下移100%的高度下來，展開的內容會在下方 */
+                transform: translateY(100%);
+
+
+            }
+
+            .nav__item {
+                padding: 8px 0;
+                width: 100%;
+                text-align: center;
+                background-color: #fff;
+            }
+
+            .hamBar {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo">LOGO</h1>
+        <ul class="header__nav">
+            <li class="nav__item"><a href="#" title="1">section</a></li>
+            <li class="nav__item"><a href="#" title="2">section2</a></li>
+            <li class="nav__item"><a href="#" title="3">section3</a></li>
+            <li class="nav__item"><a href="#" title="4">section4</a></li>
+            <li class="nav__item"><a href="#" title="5">section5</a></li>
+        </ul>
+        <a class="hamBar" href="#"><i class="fas fa-bars"></i></a>
+    </header>
+    <main>
+        <section id="section--1">
+            <h2 class="section__title">section1</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?</p>
+        </section>
+        <section id="section--2">
+            <h2 class="section__title">section2</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?</p>
+        </section>
+        <section id="section--3">
+            <h2 class="section__title">section3</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?</p>
+        </section>
+        <section id="section--4">
+            <h2 class="section__title">section4</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?</p>
+        </section>
+        <section id="section--5">
+            <h2 class="section__title">section5</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque error vitae, debitis unde dicta odio?
+                Ipsam, odio nulla. Dignissimos nisi quisquam officiis dicta illum nesciunt velit architecto soluta harum
+                nostrum?</p>
+        </section>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            // 在這裡寫入你的js程式碼
+            $('.hamBar').click(function () {
+                event.preventDefault();
+                $('.header__nav').slideToggle(500);
+            })
+        });
+    </script>
+</body>
+
+</html>
